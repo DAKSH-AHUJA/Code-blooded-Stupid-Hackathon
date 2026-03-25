@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+}
+
+/* FOOTER BACKGROUND */
+.footer {
+  background: #000;
+  color: #ccc;
+  padding: 40px 8%;
+  font-family: Arial, sans-serif;
+}
+
+/* 🔥 FORCE HORIZONTAL */
+.footer-container {
+  display: flex;
+  flex-direction: row;   /* IMPORTANT */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* EACH COLUMN */
+.section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* VERTICAL LINES */
+.section:not(:last-child) {
+  border-right: 1px solid #222;
+}
+
+/* TEXT */
+h2, h3 {
+  color: #fff;
+}
+
+p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* BOX STYLE */
+.box {
+  background: #111;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* BOTTOM */
+.bottom {
+  border-top: 1px solid #222;
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}

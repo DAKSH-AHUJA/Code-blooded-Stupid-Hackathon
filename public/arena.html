@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItExists - You Won't Last 5 Minutes</title>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-shell text-[#f7f2ea] min-h-screen">
+    <div class="page-wrap page-enter">
+      <div id="topNavMount"></div>
+
+      <section class="surface-panel p-6 md:p-8">
+        <div class="split-header">
+          <div>
+            <h1 class="text-3xl md:text-4xl mb-2">You Won't Last 5 Minutes</h1>
+            <p class="page-subtitle">Ultimate Chaos Tic Tac Toe. You only get 2 marks each, so old moves disappear and your confidence follows.</p>
+          </div>
+          <div class="topnav-right">
+            <button id="resetGameBtn" class="action-button action-button-ghost" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="arena-layout" style="margin-top: 2rem;">
+          <div class="sub-panel chaos-board-panel">
+            <div id="board" class="chaos-board" aria-label="Chaos Tic Tac Toe board"></div>
+          </div>
+
+          <aside class="sub-panel sidebar-stack">
+            <div>
+              <p class="eyebrow mb-2">Current Turn</p>
+              <p id="status" class="text-2xl font-semibold">Player X Turn</p>
+            </div>
+            <div>
+              <p class="eyebrow mb-2">Rule</p>
+              <p class="text-sm text-[#f7f2ea]/72">Only 2 moves per player. When you place a third, your oldest move disappears.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="mini-stat">
+                <span class="eyebrow">X Moves</span>
+                <strong id="xMoveCount">0 / 2</strong>
+              </div>
+              <div class="mini-stat">
+                <span class="eyebrow">O Moves</span>
+                <strong id="oMoveCount">0 / 2</strong>
+              </div>
+            </div>
+            <div id="chaosMessage" class="chaos-callout">Make the first bad decision.</div>
+          </aside>
+        </div>
+      </section>
+
+      <div id="footerMount"></div>
+    </div>
+    <script src="/js/footer.js"></script>
+    <script type="module" src="/js/arena.js"></script>
+  </body>
+</html>

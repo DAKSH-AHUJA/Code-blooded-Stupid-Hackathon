@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItExists - Go On Embarrass Yourself</title>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-shell text-[#f7f2ea] min-h-screen">
+    <div class="chat-page page-enter">
+      <div id="topNavMount"></div>
+
+      <section class="surface-panel chat-panel">
+        <div class="split-header" style="margin-bottom: 0.75rem;">
+          <h1 class="text-3xl mb-1">Go On Embarrass Yourself</h1>
+          <button id="clearChatBtn" type="button" class="action-button action-button-ghost">
+            Clear Chat
+          </button>
+        </div>
+        <div id="chatMessages" class="chat-messages chat-shell"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" class="flex-1 field-input" placeholder="Say something questionable..." />
+          <button class="action-button action-button-primary">Unleash</button>
+        </form>
+      </section>
+
+      <div id="footerMount"></div>
+    </div>
+    <script src="/js/footer.js"></script>
+    <script type="module" src="/js/void.js"></script>
+  </body>
+</html>

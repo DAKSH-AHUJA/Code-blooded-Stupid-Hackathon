@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItExists - Workspace</title>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-shell text-[#f7f2ea] min-h-screen">
+    <div class="page-wrap-wide page-enter">
+      <div id="topNavMount"></div>
+
+      <main>
+        <section class="dashboard-grid">
+          <a href="/void.html" class="feature-tile stagger-item">
+            <h2 class="text-2xl mb-2">Go On Embarrass Yourself</h2>
+            <p>Say something reckless and get a sarcastic reply back.</p>
+          </a>
+          <a href="/arena.html" class="feature-tile stagger-item">
+            <h2 class="text-2xl mb-2">You Won't Last 5 Minutes</h2>
+            <p>Play chaotic tic tac toe where your oldest move disappears.</p>
+          </a>
+          <a href="/nonsense.html" class="feature-tile stagger-item">
+            <h2 class="text-2xl mb-2">Something Is Wrong Inside</h2>
+            <p>Open a random set of cursed memes and refresh for different damage.</p>
+          </a>
+        </section>
+
+        <section class="surface-panel email-panel page-pop" style="margin-top: 1.5rem;">
+          <div class="email-panel-head">
+            <div>
+              <p class="eyebrow mb-2">Inbox Damage</p>
+              <h2 class="text-3xl mb-2">Let Us Email You Something Unhelpful</h2>
+              <p class="page-subtitle">Drop your email and the app will send a silly message designed to feel unnecessary in a very specific way.</p>
+            </div>
+          </div>
+
+          <form id="emailCaptureForm" class="email-form">
+            <div class="email-mode-group" aria-label="Email style">
+              <button
+                type="button"
+                class="email-mode-pill is-selected"
+                data-email-mode="lighter"
+              >
+                Keep It Casual
+              </button>
+              <button
+                type="button"
+                class="email-mode-pill"
+                data-email-mode="deeper"
+              >
+                Make It Memorable
+              </button>
+            </div>
+            <input
+              id="emailInput"
+              name="user_email"
+              type="email"
+              autocomplete="email"
+              required
+              class="field-input email-input"
+              placeholder="you@example.com"
+            />
+            <button id="emailSubmitBtn" type="submit" class="action-button action-button-primary email-submit">
+              Send Me Something Weird
+            </button>
+          </form>
+
+          <p id="emailStatus" class="status-text muted-copy" style="margin-top: 0.9rem;"></p>
+        </section>
+      </main>
+
+      <div id="footerMount"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="/js/email-config.js"></script>
+    <script src="/js/footer.js"></script>
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>

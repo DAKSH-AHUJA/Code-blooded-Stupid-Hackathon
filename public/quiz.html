@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItExists - Character Setup</title>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="spotlight-bg min-h-screen text-[#f5f0e8] bg-[#1a1a1a]">
+    <div class="page-wrap-tight page-enter">
+      <div class="mb-8">
+        <p class="quiz-progress-label">How much we hate you so far:</p>
+        <div class="quiz-progress-track">
+          <div id="progressFill" class="quiz-progress-fill"></div>
+        </div>
+      </div>
+
+      <section id="quizSection" class="fade-in surface-panel p-6 md:p-7">
+        <h2 id="questionText" class="text-2xl mb-6"></h2>
+        <div id="optionsWrap" class="quiz-options"></div>
+      </section>
+
+      <section id="loadingSection" class="hidden loading-wrap">
+        <div class="loading-panel loading-card">
+          <div class="spinner-ring spin-slow"></div>
+          <p class="text-xl mb-3">Calculating how little potential you have...</p>
+          <p id="loadingHint" class="text-sm text-[#e8d44d] min-h-[24px]">Sharpening insults and squinting at your choices.</p>
+          <div class="w-full h-3 rounded-full bg-black/50 mt-5 overflow-hidden">
+            <div class="fake-loader h-full bg-[#c0392b]"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultSection" class="hidden page-pop">
+        <div class="surface-panel p-6 md:p-8">
+          <p class="eyebrow mb-3">Identity Assignment</p>
+          <h2 class="text-3xl md:text-4xl mb-3">We think we'll call you this</h2>
+          <p class="identity-copy">The app picked the name. You only get to pick the face.</p>
+
+          <div class="identity-grid">
+            <div class="sub-panel text-center">
+              <button id="nicknameLockBtn" class="locked-name-button w-full" type="button">
+                <span class="block text-xs uppercase tracking-[0.24em] text-[#f7f2ea]/55 mb-2">This is what we'll call you</span>
+                <span id="nicknameText" class="block text-2xl md:text-3xl"></span>
+              </button>
+              <p class="text-sm text-[#f6d66e] mt-3">Try changing it and see how quickly that goes nowhere.</p>
+            </div>
+
+            <div class="sub-panel">
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <div>
+                  <p class="eyebrow mb-2">Profile Picture</p>
+                  <h3 class="text-2xl">Pick Your Doodle</h3>
+                </div>
+                <button id="openDoodlePickerBtn" class="action-button action-button-ghost" type="button">
+                  Select Picture
+                </button>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="selected-doodle-frame">
+                  <img id="selectedDoodlePreview" class="selected-doodle-image hidden" alt="Selected doodle preview" />
+                  <div id="selectedDoodlePlaceholder" class="selected-doodle-placeholder">+</div>
+                </div>
+                <div>
+                  <p id="selectedDoodleName" class="text-lg font-semibold">No doodle selected yet</p>
+                  <p class="identity-doodle-copy">Choose one from the gallery before entering the workspace.</p>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <button
+                  id="enterDashboardBtn"
+                  type="button"
+                  class="action-button action-button-primary w-full md:w-auto"
+                >
+                  Enter the Workspace
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="footerMount"></div>
+    </div>
+
+    <div id="doodleModal" class="hidden modal-overlay">
+      <div class="doodle-modal modal-pop">
+        <div class="flex items-start justify-between gap-3 mb-5">
+          <div>
+            <p class="eyebrow mb-2">Select Profile Picture</p>
+            <h3 class="text-3xl">Choose Your Doodle</h3>
+          </div>
+          <button id="closeDoodleModalBtn" class="modal-close-button" type="button">&times;</button>
+        </div>
+        <div id="doodleGrid" class="doodle-grid"></div>
+      </div>
+    </div>
+
+    <div id="quizToast" class="toast hidden"></div>
+
+    <script src="/js/footer.js"></script>
+    <script type="module" src="/js/quiz.js"></script>
+  </body>
+</html>

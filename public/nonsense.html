@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItExists - Something Is Wrong Inside</title>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-shell text-[#f7f2ea] min-h-screen">
+    <div class="page-wrap-tight page-enter">
+      <div id="topNavMount"></div>
+
+      <section class="surface-panel p-5">
+        <div class="meme-toolbar mb-5">
+          <h1 class="text-3xl mb-1">Something Is Wrong Inside</h1>
+          <button id="refreshMemesBtn" class="action-button action-button-ghost" type="button">Refresh</button>
+        </div>
+        <div id="memeGrid" class="single-meme-stage"></div>
+        <p id="memeStatus" class="status-text muted-copy mt-4"></p>
+      </section>
+
+      <div id="footerMount"></div>
+    </div>
+    <script src="/js/footer.js"></script>
+    <script type="module" src="/js/nonsense.js"></script>
+  </body>
+</html>
