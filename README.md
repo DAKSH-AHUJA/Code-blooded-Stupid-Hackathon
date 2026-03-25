@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ItExists
 
 ItExists is a chaotic hackathon web app with:
@@ -126,3 +127,6 @@ Check DB credentials in `.env` and confirm the `users` table exists.
 - This project is intentionally absurd and non-serious in tone.
 - Keep roast behavior sarcastic/non-helpful by design.
 - Frontend state uses `localStorage` and `sessionStorage`.
+=======
+# Code-blooded-Stupid-Hackathon
+>>>>>>> ce6e4fd8a933ac2466633e8804f4e9f892380df5
